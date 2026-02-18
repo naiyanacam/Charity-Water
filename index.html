@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Charity: Water</title>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Proxima Nova fallback using Google Fonts (closest match) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- =========================
+         NAVIGATION BAR
+    ========================== -->
+    <header>
+        <img src="logo-charity-water.png" alt="Charity: Water" class="logo">
+
+        <nav>
+            <!-- These link to sections further down the page -->
+            <a href="#about">About Us</a>
+            <a href="#action">Take Action</a>
+            <a href="#track">Track Donations</a>
+        </nav>
+
+        <!-- Main donate button -->
+        <a href="#donate" class="donate-top">Donate Today</a>
+    </header>
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Donate to a charity as transparent as our water</h1>
+
+            <div class="donation-box" id="donate">
+
+                <div class="donation-header">
+                    Give the gift of clean water, one donation at a time
+                </div>
+
+                <div class="donation-body">
+                    No amount is too big or too small.
+                    <strong>For the cost of a coffee</strong>, you can make a difference.
+                </div>
+
+                <button class="donate-btn">$10 Donation</button>
+                <div class="custom-donation">
+                    <input type="number" id="customAmount" placeholder="Enter amount" min="1">
+                     <button id="customDonateBtn">Donate</button>
+                </div>
+
+                <div class="donation-footer">
+                    100% of the proceeds goes towards those in need
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =========================
+         ABOUT US SECTION
+    ========================== -->
+    <section id="about" class="info-section">
+        <h2>About Us</h2>
+        <p>
+            Charity: Water is committed to bringing clean and safe drinking water
+            to people in developing nations through transparent donation tracking
+            and sustainable solutions.
+        </p>
+    </section>
+
+
+    <!-- =========================
+         TAKE ACTION SECTION
+    ========================== -->
+    <section id="action" class="info-section">
+        <h2>Take Action</h2>
+        <p>
+            Start a fundraiser, share our mission, or volunteer to help bring
+            clean water to communities in need.
+        </p>
+    </section>
+
+
+    <!-- =========================
+         TRACK DONATIONS SECTION
+    ========================== -->
+    <section id="track" class="info-section">
+        <h2>Track Donations</h2>
+                  <h2 class="counter">
+    $<span id="donationAmount">0</span> raised so far
+</h2>
+
+        <div class="progress-container">
+            <div class="wave-progress" id="progressBar">
+                <div class="wave"></div>
+                <span class="progress-text" id="progressText"></span>
+            </div>
+        </div>
+
+        <p>
+            We believe in complete transparency. Track your donation and see
+            exactly where your money is making an impact.
+        </p>
+    </section>
+    <div id="popup" class="popup">
+        Thank you for your donation! �
+    </div>
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+
+    </body>
+    </html>
+<div class="wave-progress" id="progressBar">
+    <div class="wave"></div>
+    <span id="progressText" class="progress-text"></span>
+</div>

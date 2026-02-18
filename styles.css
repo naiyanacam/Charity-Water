@@ -1,0 +1,381 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main font */
+body {
+    font-family: 'Proxima Nova', 'Montserrat', sans-serif;
+    color: white;
+}
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    position: fixed;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Logo */
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Top donate button */
+.donate-top {
+    background: #FFC907;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    height: 100vh;
+    background: url('hero.jpg') no-repeat center 80%/cover;
+    display: flex;
+    align-items: center;
+    padding-left: 350px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   DONATION BOX
+========================= */
+
+.donation-box {
+    width: 400px;
+    background: white;
+    color: black;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Yellow header */
+.donation-header {
+    background: #FFC907;
+    padding: 20px;
+    font-weight: 700;
+}
+
+/* Main body text */
+.donation-body {
+    padding: 20px;
+    background: #f2f2f2;
+}
+
+/* Donate buttons */
+.donate-btn {
+    width: 80%;
+    margin: 20px auto 10px auto;
+    display: block;
+    padding: 15px;
+    background: #FFC907;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Custom button */
+.custom-btn {
+    width: 80%;
+    margin: 10px auto 20px auto;
+    display: block;
+    padding: 15px;
+    background: #e0e0e0;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Footer strip */
+.donation-footer {
+    background: #FFC907;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* =========================
+   INFORMATION SECTIONS
+========================= */
+
+.info-section {
+    padding: 100px 80px;
+    color: black;
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.info-section::before {
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, #FFC907 0%, #FFD922 100%);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.info-section {
+    position: relative;
+    padding-left: 100px;
+    background: linear-gradient(135deg, #ffffff 0%, #f9f7f2 100%);
+    border-right: 1px solid rgba(255, 201, 7, 0.15);
+    transition: all 0.4s ease;
+}
+
+.info-section:hover {
+    background: linear-gradient(135deg, #fefdfb 0%, #f5f2eb 100%);
+    border-right: 1px solid rgba(255, 201, 7, 0.3);
+    box-shadow: inset 0 2px 8px rgba(255, 201, 7, 0.05);
+}
+
+.info-section h2 {
+    margin-bottom: 24px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
+    position: relative;
+    padding-bottom: 16px;
+}
+
+.info-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: #FFC907;
+    border-radius: 2px;
+}
+
+.info-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #404040;
+    font-weight: 400;
+    margin: 0;
+    max-width: 600px;
+    letter-spacing: 0.3px;
+}
+.hero {
+    height: 100vh;
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* Smooth transitions */
+button, .donate-top {
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+button:hover, .donate-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Yellow button hover glow */
+.donate-btn:hover {
+    background-color: #ffdb4d;
+}
+..progress-container {
+    width: 80%;
+    height: 35px;
+    background: #e5e5e5;
+    margin: 20px auto;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Yellow water fill */
+.wave-progress {
+    height: 100%;
+    width: 0%;
+    background: #FFC907;
+    position: relative;
+    overflow: hidden;
+    transition: width 1.5s ease;
+}
+
+/* Moving wave overlay */
+.wave {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 40%;
+    animation: waveMove 4s linear infinite;
+}
+
+/* Wave animation */
+@keyframes waveMove {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Percentage text */
+.progress-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    top: 8px;
+    color: black;
+}
+
+.popup {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #FFC907;
+    padding: 15px 25px;
+    border-radius: 8px;
+    display: none;
+    font-weight: bold;
+    color: black;
+}
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav {
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .donation-box {
+        width: 100%;
+    }
+}
+.custom-donation {
+    width: 80%;
+    margin: 10px auto 20px auto;
+    display: flex;
+    gap: 10px;
+}
+
+.custom-donation input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.custom-donation button {
+    background: #FFC907;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+transition: width 1.5s ease;
+.progress-container {
+    width: 80%;
+    height: 35px;
+    background: #e5e5e5;
+    margin: 20px auto;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.wave-progress {
+    height: 100%;
+    width: 0%;
+    background: #FFC907;
+    position: relative;
+    overflow: hidden;
+    transition: width 1.5s ease;
+}
+
+.wave {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 40%;
+    animation: waveMove 4s linear infinite;
+}
+
+@keyframes waveMove {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.progress-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    top: 8px;
+    color: black;
+}
