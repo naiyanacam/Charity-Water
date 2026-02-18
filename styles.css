@@ -221,7 +221,7 @@ button:hover, .donate-top:hover {
 .donate-btn:hover {
     background-color: #ffdb4d;
 }
-..progress-container {
+.progress-container {
     width: 80%;
     height: 35px;
     background: #e5e5e5;
